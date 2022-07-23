@@ -15,7 +15,7 @@ class ResponsiveLayout extends StatelessWidget {
     this.webOrDesktop,
   }) : super(key: key);
 
-  Widget _defaultWidget(Widget? platform) => platform ?? const SizedBox();
+  Widget _defaultWidget(Widget? platform) => platform ?? mobile;
 
   @override
   Widget build(BuildContext context) {
