@@ -21,30 +21,41 @@ class TabletLoginScreen extends StatelessWidget with BaseClassMixin {
       ),
       body: Padding(
         padding: EdgeInsets.all(sizer.getFixedSize(20)),
-        child: SingleChildScrollView(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              Image.asset(
-                "images/ic_io.png",
-                height: sizer.getFixedSize(100),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Image.asset(
+              "images/ic_io.png",
+              width: sizer.getFixedSize(300),
+              height: sizer.getFixedSize(100),
+            ),
+            Expanded(
+              child: Container(
+                alignment: Alignment.center,
+                child: SingleChildScrollView(
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      CustomTextField(
+                        sizer: sizer,
+                        hint: "Username",
+                        width: sizer.getFixedSize(500),
+                      ),
+                      SizedBox(height: sizer.getFixedSize(20)),
+                      CustomTextField(
+                        sizer: sizer,
+                        hint: "Password",
+                        width: sizer.getFixedSize(500),
+                      ),
+                      SizedBox(height: sizer.getFixedSize(20)),
+                      FingerPrint(sizer: sizer),
+                    ],
+                  ),
+                ),
               ),
-              SizedBox(height: sizer.getFixedSize(100)),
-              CustomTextField(
-                sizer: sizer,
-                hint: "Username",
-                width: sizer.getFixedSize(500),
-              ),
-              SizedBox(height: sizer.getFixedSize(20)),
-              CustomTextField(
-                sizer: sizer,
-                hint: "Password",
-                width: sizer.getFixedSize(500),
-              ),
-              SizedBox(height: sizer.getFixedSize(20)),
-              FingerPrint(sizer: sizer),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
