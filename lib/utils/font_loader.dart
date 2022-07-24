@@ -9,6 +9,7 @@ class FontLoader {
   final _sizer = const SizerManager();
 
   TextStyle textStyle(
+    BuildContext context,
     FontFamilyType family,
     FontWeight weight,
     FontStyle style,
@@ -22,6 +23,7 @@ class FontLoader {
     bool isSizeFixed = false,
   }) {
     final fontSize = _sizer.getTextSizeOf(
+      context,
       mobileSize,
       tabletSize: tabletSize,
       webOrDesktopSize: webOrDesktopSize,

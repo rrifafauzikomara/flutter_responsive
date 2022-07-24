@@ -43,6 +43,7 @@ class CustomButton extends StatelessWidget {
             child: Text(
               buttonText,
               style: fontUtils.roboto.size14.regular(
+                context,
                 color: Colors.white,
                 isSizeFixed: true,
               ),

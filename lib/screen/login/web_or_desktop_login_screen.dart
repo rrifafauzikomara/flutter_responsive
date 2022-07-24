@@ -16,7 +16,7 @@ class WebOrDesktopLoginScreen extends StatelessWidget with BaseClassMixin {
         elevation: 1,
         title: Text(
           "Web or Desktop Login Screen",
-          style: fontUtils.roboto.size16.bold(isSizeFixed: true),
+          style: fontUtils.roboto.size16.bold(context, isSizeFixed: true),
         ),
       ),
       body: Padding(

@@ -21,13 +21,13 @@ class ResponsiveLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     return LayoutBuilder(
       builder: (context, cons) {
-        if (sizer.isMobileScreen()) {
+        if (sizer.isMobileScreen(context)) {
           debugPrint("Load Mobile Screen");
           return _defaultWidget(mobile);
-        } else if (sizer.isTabletScreen()) {
+        } else if (sizer.isTabletScreen(context)) {
           debugPrint("Load Tablet Screen");
           return _defaultWidget(tablet);
-        } else if (sizer.isWebOrDesktopScreen()) {
+        } else if (sizer.isWebOrDesktopScreen(context)) {
           debugPrint("Load Web or Desktop Screen");
           return _defaultWidget(webOrDesktop);
         } else {

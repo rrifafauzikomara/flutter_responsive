@@ -57,7 +57,8 @@ class FontType {
   final FontFamilyType _family;
   final double _mobileSize;
 
-  TextStyle thin({
+  TextStyle thin(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -65,6 +66,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.thin.value,
         FontStyle.normal,
@@ -76,7 +78,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle thinItalic({
+  TextStyle thinItalic(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -84,6 +87,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.thin.value,
         FontStyle.italic,
@@ -95,7 +99,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle extraLight({
+  TextStyle extraLight(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -103,6 +108,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.extraLight.value,
         FontStyle.normal,
@@ -114,7 +120,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle light({
+  TextStyle light(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -122,6 +129,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.light.value,
         FontStyle.normal,
@@ -133,7 +141,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle regular({
+  TextStyle regular(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -141,6 +150,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.regular.value,
         FontStyle.normal,
@@ -152,7 +162,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle lightItalic({
+  TextStyle lightItalic(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -160,6 +171,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.light.value,
         FontStyle.italic,
@@ -171,7 +183,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle medium({
+  TextStyle medium(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -179,6 +192,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.medium.value,
         FontStyle.normal,
@@ -190,7 +204,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle mediumItalic({
+  TextStyle mediumItalic(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -198,6 +213,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.medium.value,
         FontStyle.italic,
@@ -209,7 +225,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle semiBold({
+  TextStyle semiBold(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -217,6 +234,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.semiBold.value,
         FontStyle.normal,
@@ -228,7 +246,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle bold({
+  TextStyle bold(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -236,6 +255,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.bold.value,
         FontStyle.normal,
@@ -247,7 +267,8 @@ class FontType {
         isSizeFixed: isSizeFixed,
       );
 
-  TextStyle extraBold({
+  TextStyle extraBold(
+    BuildContext context, {
     Color? color = Colors.black,
     TextDecoration? decoration = TextDecoration.none,
     double? tabletSize,
@@ -255,6 +276,7 @@ class FontType {
     bool isSizeFixed = false,
   }) =>
       rgFontLoader.textStyle(
+        context,
         _family,
         CustomFontWeight.extraBold.value,
         FontStyle.normal,
