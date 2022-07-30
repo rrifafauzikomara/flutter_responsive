@@ -17,9 +17,9 @@ class FingerPrint extends StatelessWidget {
           ),
           borderRadius: const BorderRadius.all(Radius.circular(30)),
         ),
-        padding: EdgeInsets.all(sizer.getFixedSize(10)),
-        height: sizer.getFixedSize(70),
-        width: sizer.getFixedSize(70),
+        padding: EdgeInsets.all(sizer.getFixedSizeOf(context, 10)),
+        height: sizer.getFixedSizeOf(context, 70),
+        width: sizer.getFixedSizeOf(context, 70),
         child: Image.asset("images/ic_fingerprint.png"),
       ),
     );

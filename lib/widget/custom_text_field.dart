@@ -18,7 +18,7 @@ class CustomTextField extends StatelessWidget {
     return Align(
       alignment: Alignment.center,
       child: Container(
-        padding: EdgeInsets.symmetric(horizontal: sizer.getFixedSize(10)),
+        padding: EdgeInsets.symmetric(horizontal: sizer.getFixedSizeOf(context, 10)),
         width: width,
         color: Colors.grey.withOpacity(0.3),
         child: TextFormField(

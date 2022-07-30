@@ -20,14 +20,14 @@ class WebOrDesktopLoginScreen extends StatelessWidget with BaseClassMixin {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(sizer.getFixedSize(20)),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
               "images/ic_io.png",
-              width: sizer.getFixedSize(300),
-              height: sizer.getFixedSize(100),
+              width: 300,
+              height: 100,
             ),
             Expanded(
               child: Container(
@@ -40,21 +40,21 @@ class WebOrDesktopLoginScreen extends StatelessWidget with BaseClassMixin {
                       CustomTextField(
                         sizer: sizer,
                         hint: "Username",
-                        width: sizer.getFixedSize(500),
+                        width: 500,
                       ),
-                      SizedBox(height: sizer.getFixedSize(20)),
+                      const SizedBox(height: 20),
                       CustomTextField(
                         sizer: sizer,
                         hint: "Password",
-                        width: sizer.getFixedSize(500),
+                        width: 500,
                       ),
-                      SizedBox(height: sizer.getFixedSize(20)),
+                      const SizedBox(height: 20),
                       CustomButton(
                         buttonText: "Login",
                         fontUtils: fontUtils,
                         sizer: sizer,
                         onTap: () {},
-                        width: sizer.getFixedSize(500),
+                        width: 500,
                       ),
                     ],
                   ),

@@ -4,14 +4,16 @@ import 'package:sizer/sizer.dart';
 class SizerManager {
   const SizerManager();
 
+  /// Check platform based on screen size (width)
   bool isTabletScreen(BuildContext context) =>
       MediaQuery.of(context).size.width < 1025;
 
+  /// Check platform based on screen size (width)
   bool isMobileScreen(BuildContext context) =>
       MediaQuery.of(context).size.width < 600;
 
-  /// Because the size or resolution between web, mac, linux, and windows
-  /// is same, so we only handle one for all of these
+  /// Check platform based on screen size (width) and because the size or resolution
+  /// between web, mac, linux, and windows is same, so we only handle one for all of these
   bool isWebOrDesktopScreen(BuildContext context) =>
       MediaQuery.of(context).size.width > 1025;
 
@@ -45,8 +47,25 @@ class SizerManager {
     }
   }
 
-  /// If you need fixed size from Flutter, just use it
-  double getFixedSize(double size) => size;
+  /// If you need fixed size from Flutter based on platform, just use this
+  ///
+  /// Ex: Use this for handling multiple sizer in sharing widget for each platform
+  double getFixedSizeOf(
+    BuildContext context,
+    double mobileSize, {
+    double? tabletSize,
+    double? webOrDesktopSize,
+  }) {
+    if (isMobileScreen(context)) {
+      return mobileSize;
+    } else if (isTabletScreen(context)) {
+      return tabletSize ?? mobileSize;
+    } else if (isWebOrDesktopScreen(context)) {
+      return webOrDesktopSize ?? mobileSize;
+    } else {
+      return mobileSize;
+    }
+  }
 
   /// If .w not responsive or strange, we can change it to others package
   /// or manually using MediaQuery

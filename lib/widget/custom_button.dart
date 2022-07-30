@@ -32,7 +32,7 @@ class CustomButton extends StatelessWidget {
           onTap: onTap,
           child: Container(
             width: width,
-            height: sizer.getFixedSize(height),
+            height: sizer.getFixedSizeOf(context, height),
             alignment: Alignment.center,
             decoration: const BoxDecoration(
               color: Colors.blue,

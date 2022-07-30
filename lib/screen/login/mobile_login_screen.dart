@@ -20,14 +20,14 @@ class MobileLoginScreen extends StatelessWidget with BaseClassMixin {
         ),
       ),
       body: Padding(
-        padding: EdgeInsets.all(sizer.getFixedSize(20)),
+        padding: const EdgeInsets.all(20),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Image.asset(
               "images/ic_io.png",
-              width: sizer.getFixedSize(300),
-              height: sizer.getFixedSize(100),
+              width: 300,
+              height: 100,
             ),
             Expanded(
               child: Container(
@@ -41,12 +41,12 @@ class MobileLoginScreen extends StatelessWidget with BaseClassMixin {
                         sizer: sizer,
                         hint: "Username",
                       ),
-                      SizedBox(height: sizer.getFixedSize(20)),
+                      const SizedBox(height: 20),
                       CustomTextField(
                         sizer: sizer,
                         hint: "Password",
                       ),
-                      SizedBox(height: sizer.getFixedSize(20)),
+                      const SizedBox(height: 20),
                       FingerPrint(sizer: sizer),
                     ],
                   ),
